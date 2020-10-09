@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.atguigu.spark</groupId>
+    <artifactId>spark-core0829</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>spark-core-demo</module>
+        <module>spark-sql-demo</module>
+        <module>spark-streaming-demo</module>
+        <module>spark-streaming-0-8</module>
+    </modules>
+
+    <!-- 声明并引入,所有子模块自动引入 -->
+    <!--<dependencies>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.12</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+    </dependencies>-->
+
+    <!--声明但不引入,某几个模块需要的时候单独引入,但不需要指定版本-->
+    <!--<dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.hadoop</groupId>
+                <artifactId>hadoop-common</artifactId>
+                <version>3.1.3</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>-->
+
+</project>
