@@ -21,6 +21,8 @@ object StreamWordCount {
         
         wordCountStreams.print()
         
+        println("hhhhh")
+        
         //启动SparkStreamingContext
         ssc.start()
         ssc.awaitTermination()
