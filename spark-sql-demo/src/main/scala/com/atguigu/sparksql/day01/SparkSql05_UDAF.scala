@@ -22,6 +22,7 @@ object SparkSql05_UDAF {
         
         spark.sql("select myAvg(age) from people").show()
         
+        println("a")
         // change by huguo
         // 关闭SparkSession
         spark.stop()
