@@ -21,7 +21,7 @@ object SparkSql05_UDAF {
         df.createTempView("people")
         
         spark.sql("select myAvg(age) from people").show()
-        
+
         // 关闭SparkSession
         spark.stop()
     }
@@ -46,7 +46,7 @@ class MyAvg03 extends Aggregator[Long, AvgBuffer,Double]{
         Math.round(reduction.sum * 100D / reduction.count) / 100D
     }
     
-    override def bufferEncoder: Encoder[AvgBuffer] = Encoders.product
+    override def bufferEncoder: Encoder[AvgBuffer] = Encoders.product[]
     
     override def outputEncoder: Encoder[Double] = Encoders.scalaDouble
 }
